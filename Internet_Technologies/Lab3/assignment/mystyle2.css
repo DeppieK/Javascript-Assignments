@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		body {
+												/*και στις δύο φόρμες οταν βγαζω το tag: body {} το περιεχόμενο χαλαει και όταν βαζω τις εντολες του html,body{} μέσα στο body{} η εντολές δεν πραγματοποιούνται*/
+				
+			}
+		fieldset {
+			margin: 200px;
+			background-color: limegreen;
+			border-color:darkgreen;
+			border-width: 4px;
+			border-style: solid;			
+			
+		}
+		
+		html, body {
+					font-family: comic sans ms ;
+					height: 55%;
+					background-color: white;
+					text-align: left;
+					color:black;
+		}
+		
+	</style>
+</html>	

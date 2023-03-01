@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+		<title>IEETeL</title>
+    </head>
+    <style>
+        /*Styling using css*/
+        h2 {
+           font-family: monospace; 
+           font-size: 25px;
+           color: rgb(78, 76, 76);
+           font-weight: lighter;
+           text-align: left;
+        }
+        h3 {
+           font-family: monospace; 
+           font-size: 20px;
+           color: black;
+           text-align: center;
+           font-weight: lighter;
+        }
+        body{
+            background-color:#e6e4e4;
+            margin: 5px 10px 5px 10px;
+        }
+        hr{
+            border: 0.5px solid rgba(0, 0, 0, 0.404);
+            text-align:left;
+            margin-right: 400px;
+        }
+        ul{ 
+			font-family:monospace; 
+			font-weight:none;
+            list-style-type: disc;
+            list-style-position: outside;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color:#464747;
+			}
+            li {
+			float: left;
+			}
+
+		li a {  
+                font-family: monospace;
+                font-size: 13.5px;
+                text-decoration: none;
+                display: grid;
+				color:rgba(255, 255, 255, 0.76);
+				text-align: center;
+				padding: 10px 15px;
+			}
+		li a:hover {
+			background-color:#0000008e;
+			}
+
+		.active {
+		background-color: black;
+			}
+        p {
+            font-family: Verdana, sans-serif;
+            font-size: 15.5px;
+        }
+        div {
+                border: double black;
+            }
+        .map{
+            border: none;
+            text-align: center;
+        }
+    </style>
+    <body>
+        <h2>
+            IEETeL 2021
+        </h2>
+        <!--buttons to the other pages of the site-->
+        <ul>
+            <li><a href="science_conference.html">Home</a></li>
+            <li><a href="./conference_content.html">Info</a></li>
+            <li><a class="active" href="./location.html">Location</a></li>
+            <li><a href="./committees.html">Committees</a></li>
+            <li><a href="./program.html">Program</a></li>
+            <li><a href="./form.html">Form</a></li>
+            <li><a href="./sign_in.html">Sign in</a></li>
+        </ul>
+        <br/>
+        <hr/>
+        <br/>
+        <div>
+            <h3>
+                Location
+            </h3>
+        </div>
+        <br/>
+        <p>
+            4-6 November 2021, Sydney, Australia
+        </p>
+        <br/>
+        <div>
+            <h3>
+                Related Resources
+            </h3>
+        </div>
+        <br/>
+        <!--Importing links for more conferences-->
+        <p>
+            <a href="http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=34199">AIP Journal - Indexed in Scopus 2021</a>
+            &nbsp;Journal of Social and Business Informatics - Acta Informatica Pragensia<br/>
+            <a href="http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=114993">ICENT--EI, Scopus 2021</a>
+            &nbsp;2021 3rd International Conference on Emerging Networks Technologies (ICENT 2021)--Ei Compendex, Scopus<br/>
+            <a href="http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=86350">IWoSR 2021</a>
+            &nbsp;2021 International Workshop on Service Robotics (IWoSR 2021)<br/>
+            <a href="http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=114995">ICENT--EI Compendex, Scopus 2021</a>
+            &nbsp;2021 3rd International Conference on Emerging Networks Technologies (ICENT 2021)--Ei Compendex, Scopus<br/>
+            <a href="http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=86353">EI-CFAIS 2021</a>
+            &nbsp;2021 International Conference on Frontiers of Artificial Intelligence and Statistics (CFAIS 2021)<br/>
+            <a href="http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=119753">SMART ACCESSIBILITY 2021</a>
+            &nbsp;The Sixth International Conference on Universal Accessibility in the Internet of Things and Smart Environments<br/>
+            <a href="http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=107810">CSEIT 2021</a>
+            &nbsp;8th International Conference on Computer Science, Engineering and Information Technology<br/>
+            <a href="http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=115743">Electronics (SI Open Souce Learning) 2021</a>
+            &nbsp;Electronics Special issue: Open Source Software in Learning Environments (IF 2.412, ISSN 2079-9292)<br/>
+            <a href="http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=114122">VTS 2021</a>
+            &nbsp;39th IEEE VLSI Test Symposium<br/>
+            <a href="http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=96778">CONF-CDS 2021</a>
+            &nbsp;The 3rd International Conference on Computing and Data Science (CONF-CDS) Call for Papers<br/>
+        </p>
+        <div>
+            <h3>
+                Map
+            </h3>
+        </div>
+        <br/>
+        <!--Placing a map of Sydney-->
+        <div class="map">
+            <iframe src="http://sydneysuburbsmap.com.au/" height="300" width="400" title="Sydney, Australia"></iframe>
+        </div>
+    </body>
+</html>

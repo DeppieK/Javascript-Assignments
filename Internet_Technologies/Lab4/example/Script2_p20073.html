@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="myid">Γειά σου κόσμε!!!! Είμαι μια παράγραφος με id='myid'</p>
+        <p>Παράδειγμα επιλογής στοιχείου με τη χρήση της μεθόδου <b>getElementById</b>
+        !</p>
+        <br><br>************************<br><br>
+        <p class="intro">Πρώτη παράγραφος η οποία χρησιμοποιεί class="intro".</p>
+        <p class="intro">Παράδειγμα επιλογής στοιχείου με τη χρήση της μεθόδου
+        <b>getElementsByClassName</b> !</p>
+        <br><br>************************<br><br>
+        <div class="sele">
+            Πρώτο στοιχείο div το οποίο χρησιμοποιεί class="sele"
+            <p class="sele">Παράδειγμα επιλογής στοιχείου με τη χρήση της μεθόδου<b>querySelectorAll</b> !.</p>
+            <div style="text-align:center;">ένα div στο κέντρο</div>
+        </div>
+        <script>
+           //var mymessage=document.getElementById("myid").innerText;
+            function temporary(){
+              var x = document.querySelectorAll("div[style]");
+              var mymessage=x[0].innerText;
+              alert(mymessage);
+            }
+            setTimeout(temporary, 2000);
+           // var x = document.getElementsByTagName("em");
+           // var x = document.getElementsByClassName("intro");
+        </script>
+</body> </html>

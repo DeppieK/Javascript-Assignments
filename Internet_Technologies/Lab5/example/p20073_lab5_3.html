@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Εφαρμογή 5 JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form>
+            <div style="text-align:center;">
+                <img src="./unipi (1).gif" id="myimage" alt="unipi(1).gif"style="width:142px;height:152px;"> <br><br>
+                <input id="btnChangeImage" type="button" value="Change Image">
+            </div>
+        </form>
+        <script>
+            function ConfirmChange()
+{
+var answer=confirm("Change Image?")
+if (answer)
+ChangeImage()
+}
+            function ChangeImage()
+            {   
+                if (document.getElementById('myimage').alt!="unipi (1).gif") {
+                document.getElementById('myimage').src="./unipi (1).gif";
+                document.getElementById('myimage').alt="unipi (1).gif";
+         }
+            else {
+                    document.getElementById('myimage').src="./reader.gif";
+                    document.getElementById('myimage').alt="reader.gif";
+                }
+                }
+                document.getElementById('btnChangeImage').onclick=
+                function(){ChangeImage()};
+        </script>
+    </body>
+</html>

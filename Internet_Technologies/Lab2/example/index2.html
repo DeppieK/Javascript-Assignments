@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html style="height:100%">
+	<head>
+	<title>Πίνακας</title>
+	<style>
+		/*σχόλια σε CSS. Οι παρακάτω κανόνες μορφοποίησης θα εφαρμοστούν στις
+		ετικέτες table και td */
+		table, td {
+		border: 2px solid purple;
+		background-color:pink;
+		width:50%;
+		height:50%;
+		border-collapse: separate;
+		border-spacing: 10px 20px;
+		empty-cells: hide;
+		}	
+	</style>
+	</head>
+	<body style="height:100%;">
+	<a href="https://gunet2.cs.unipi.gr/" target="iframe_a">Τεχνολογίες Διαδικτύου</a>
+	<br>
+	<a href="http://www.cs.unipi.gr/" target="iframe_a">Τμήμα Πληροφορικής Πανεπιστημίου Πειραιά</a><br>
+	<iframe src="http://www.unipi.gr" name="iframe_a" width="500" >
+	<p>Ο φυλλομετρητής σας δεν υποστηρίζει πλαίσια</p>
+	</iframe>
+	<a href="http://www.unipi.gr">Πανεπιστήμιο Πειραιώς 
+	<map name="map1">
+		<area href=" http://www.unipi.gr " alt="Image map test" shape="rect" coords="13,14,69,136">
+		<area href=" http://www.cs.unipi.gr" alt= "image map test" shape="circle"coords="104,56,21">
+	</map>
+<img src="./unipi.gif" alt="Image with map" usemap="#map1">
+	<a href= "#myname">Δέσποινα Καραγιάννη</a>
+	<img style= "border-radius:50%;float:left;display:block; margin: 0 auto;" src="./unipi.gif" alt="Εισαγωγή εικόνας">
+	</a>
+		<table>
+			<tr><td style="background-color:purple;">first</td><td>second</td></tr>
+			<tr><td>fourth</td><td>fifth</td></tr>
+			<tr><td colspan="2" style="">third</td><td>sixth</td></tr>
+		</table>
+		<p id= "myname"> Η Δέσποινα Καραγιάννη αποτελεί μέλος της ακαδημαϊκής
+		κοινότητας</p>
+	</body>
+</html>

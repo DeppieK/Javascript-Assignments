@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Εφαρμογή 3 JavaScript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        Click Refresh (or Reload) to run the script again
+        <p id="result">
+            
+        </p>
+        <script>
+            var tempp= document.getElementById("result")
+            var firstNumber, secondNumber, Number1, Number2, sum;
+            firstNumber = window.prompt("Enter the first number", "0");
+            secondNumber = window.prompt("Enter the second number", "0");
+            Number1 = parseInt(firstNumber);
+            Number2 = parseInt(secondNumber);
+            if ((Number1 > Number2)&& Number1 && Number2) {
+                sum = Number1 + Number2;
+                ginomeno= Number1 * Number2;
+                diafora= Number1 - Number2;
+                //document.writeln("<h1>Το άθροισμα είναι: " + sum + "</h1>");
+                //document.write ("Το άθροισμα είναι: ");
+                //document.write (sum);
+                //document.write (". Όλα γράφονται σε μια σειρά");
+                tempp.innerHTML="<h1 style='color:red;'> Το αποτέλεσμα είναι: " + sum + "</h1>";
+                tempp.innerHTML="<h1 style='color:red;'> Το αποτέλεσμα είναι: " + ginomeno + "</h1>";
+                tempp.innerHTML="<h1 style='color:red;'> Το αποτέλεσμα είναι: " + diafora + "</h1>";
+            }
+        </script>
+    </body>
+</html>

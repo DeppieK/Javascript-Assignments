@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Εφαρμογή 1 JavaScript</title>
+		<script>
+			document.write("<h1 style='text-align:center;'>Παράδειγμα σεναρίου <br><em style='color:red;'> JavaScript </em> </h1>");
+			document.write("<p><strong>Δημιουργήθηκε από το φοιτητή:</strong></p>");
+			//Παράδειγμα μεταβλητών JavaScript
+			/* Τις μεταβλητές JavaScript μπορείτε να τις χρησιμοποιήσετε δηλώνοντας τες με την
+			εντολή var ή να τις χρησιμοποιήσετε άμεσα εκχωρώντας τους κάποια τιμή */
+			var firstname = "Το όνομά σας";
+			document.write(firstname);
+			document.write("<br>");
+			var surname = "Το επίθετό σας";
+			document.write(surname);
+			document.write("<br><br>");
+			function show_message()	{
+                var temp = 12;
+				alert("Η JavaScript είναι εύκολη!!");
+			}
+			//show_message();
+            setTimeout(show_message, 5000);          
+            var interval = setInterval("document.write('<p>Η <strong>setInterval</strong> προκαλεί την εκτέλεση κώδικα σε τακτά χρονικά διαστήματα. </p>')", 1000);
+			setTimeout(function clear(){
+				clearInterval(interval);
+				console.log("cleared");
+			}, 5000);
+			
+		</script>
+	</head>
+<body>
+</body>
+</html>

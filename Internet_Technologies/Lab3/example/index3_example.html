@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf8">
+		<title> Δημιουργία φόρμας συλλογής στοιχείων </title>
+	</head>
+	<body>
+		<form method="post" action="test.php">
+			Όνομα: <input type="text" name="firstname" size="30" value="unipi"><br>
+			Διεύθυνση: <textarea name="addr" rows="3" cols="30"> </textarea><br>
+			Ταχ. Κωδικός: <input type="text" name="zip" maxlength="6" size="16" placeholder="Ταχυδρομικοί κωδικοί"><br>
+			<br><br><br>
+			<label for="lastname2018"> Επώνυμο:</label>
+			<input type="text" id="lastname2018" name="lastname"><br>
+			Διεύθυνση Κατοικίας: <textarea name="homeaddr"> </textarea><br>
+			<label for="homezip2018"> Ταχ. Κωδικός κατοικίας:</label>
+			<input type="text" name="homezip" id="homezip2018" ><br >
+			<br><br><br>
+			<fieldset>
+				<legend>Στοιχεία Επικοινωνίας</legend>
+				<label for="firstname2">Όνομα:</label>
+				<input value="Όνομα" type="text" id="firstname2" name="firstname2"><br>
+				Διεύθυνση: <textarea name="addr2"> </textarea><br>
+				<label for="zip2">Ταχ. Κωδικός:</label>
+				<input placeholder="Ταχυδρομικοί Κωδικοί " type="text" name="zip2" id="zip2" ><br >
+			</fieldset>
+			<br><br><br>
+			Χώρα: <select name="country" size="5">
+			<option>UK</option>
+			<option>Greece</option>
+			<option>Italy</option>
+			<option>France</option>
+			</select>
+			<br>
+			Χώρα: <select name="country" size="5" name="mediterranean">
+			<option >UK</option>
+			<optgroup label="Μεσογειακές Χώρες">
+			<option selected>Greece</option>
+			<option>Italy</option>
+			</optgroup>
+			<option>France</option>
+			</select><br>
+			<br><br><br><br>
+			<label for="Option 1">Επιλογή 1</label>
+			<input id="Option 1" type="radio" name="payment" value="p1" checked>
+			Επιλογή 2<input type="radio" name="payment" value="p2">
+			Επιλογή 3<input type="radio" name="payment" value="p3">
+			</br></br></br>
+			Ψευδώνυμο:<input type="text" value="username">
+			Κωδικός:<input type="password" value="password">
+			<input type="reset" value="Reset">
+			<input type="submit" value="Αποστολή">
+		</form>
+		<form id="ppp"></form>
+		<form> <input form="ppp"> Πεδίο 2</form>
+		</br></br></br>
+		<input type="email" name="email">
+	</body>
+</html>	

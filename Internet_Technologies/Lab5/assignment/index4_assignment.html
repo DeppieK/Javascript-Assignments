@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf8" />
+  <title>Σταυρόλεξο</title>
+  <style>
+    .type01 {
+      border: 1px solid black;
+      background-color: white;
+      color: black;
+      text-align: center;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+    }
+
+    .type02 {
+      border: 1px solid black;
+      background-color: black;
+      color: black;
+      text-align: center;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+    }
+    #inputs {
+      border-spacing:0;
+      border-collapse: collapse;
+      padding: 0px;
+    }
+    .buttons {
+      padding-left: 22px;
+    }
+  </style>
+</head>
+<body>
+  <table id="inputs">
+    <tr>
+      <td style="width: 20px; text-align: center;"></td>
+      <td style="width: 55px; text-align: center;">1</td>
+      <td style="width: 55px; text-align: center;">2</td>
+      <td style="width: 55px; text-align: center;">3</td>
+      <td style="width: 55px; text-align: center;">4</td>
+      <td style="width: 55px; text-align: center;">5</td>
+      <td style="width: 55px; text-align: center;">6</td>
+      <td style="width: 55px; text-align: center;">7</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td colspan="7">
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td colspan="7">
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type02" disabled/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type02" disabled/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type02" disabled/>
+        <input type="text" class="type01"maxlength="1"/>
+      </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td colspan="7">
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+      </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td colspan="7">
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type02" disabled/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type02" disabled/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type02" disabled/>
+        <input type="text" class="type01" maxlength="1"/>
+      </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td colspan="7">
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+      </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td colspan="7">
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type02" disabled/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type02" disabled/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type02" disabled />
+        <input type="text" class="type01" maxlength="1"/>
+      </td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td colspan="7">
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+        <input type="text" class="type01" maxlength="1"/>
+      </td>
+    </tr>
+  </table>
+  <br/>
+  <div class="buttons">
+    <input id="resetBtn" type="reset" value="Καθαρισμός"/>
+    <input id="submitBtn" type="submit" value="Υποβολή"/>
+    <input id="solveBtn" type="button" value="Δες τη λύση"/>
+  </div>
+  <table>
+    <tr>
+      <td>
+        <ul style="list-style: none;"><b>OΡΙΖΟΝΤΙΑ</b>
+          <li><b>1.</b>&nbsp;Ρωγμές, ραγίσματα, σχισμές.</li>
+          <li><b>3.</b>&nbsp;Φωνή προβάτου ή κατσίκας.</li>
+          <li><b>5.</b>&nbsp;Κι έτσι τα καναρίνια.</li>
+          <li><b>7.</b>&nbsp;Γυναίκα της μαύρης φυλής(σύμφωνα με το Βικιλεξικό).</li>
+        </ul>
+      </td>
+      <td>
+        <ul style="list-style: none;"><b>ΚΑΘΕΤΑ</b>
+          <li><b>1.</b>&nbsp;Η σύζυγος του Ισαάκ.</li>
+          <li><b>3.</b>&nbsp;Πρά, ήπια αυτά.</li>
+          <li><b>5.</b>&nbsp;Επαίσχυντοι.</li>
+          <li><b>7.</b>&nbsp;Αυτά που δεν πεθαίνουν, τα αιώνια.</li>
+        </ul>
+      </td>
+      </td>
+    </tr>
+  </table>
+</body>
+<script>
+  // the correct answers
+  const correctAnswers = [
+    "Ρ", "Η", "Γ", "Μ", "Α", "Τ", "Α",
+    "Β", "Ε", "Λ", "Α", "Σ", "Μ", "Α",
+    "Κ", "Α", "Ν", "Α", "Ρ", "Ι", "Α",
+    "Α", "Ρ", "Α", "Π", "Ι", "Ν", "Α",
+    "Ρ", "Ε", "Β", "Ε", "Κ", "Κ", "Α",
+    "Γ", "Α", "Λ", "Η", "Ν", "Ι", "Α",
+    "Α", "Ι", "Σ", "Χ", "Ρ", "Ο", "Ι",
+    "Α", "Θ", "Α", "Ν", "Α", "Τ", "Α"
+  ]
+  // the solved inputs
+  const solvedInputs = [
+  "Ρ", "Η", "Γ", "Μ", "Α", "Τ", "Α",
+  "Ε", "", "Α", "", "Ι", "", "Θ",
+  "Β", "Ε", "Λ", "Α", "Σ", "Μ", "Α",
+  "Ε", "", "Η", "", "Χ", "", "Ν",
+  "Κ", "Α", "Ν", "Α", "Ρ", "Ι", "Α",
+  "Κ", "", "Ι", "", "Ο", "", "Τ",
+  "Α", "Ρ", "Α", "Π", "Ι", "Ν", "Α",
+]
+  var inputArray = [];
+  var wrongAnswers = false;
+  function resetColor() {
+    const inputElements = document.querySelectorAll("#inputs input[type=text]"); // creating an array with the inputs' value
+    for (i = 0; i < 49; i++) {
+        inputElements[i].style.color = "black";
+    }
+  }
+  function onSubmit() {
+
+    var hasMistakes = false;
+    var nonGreekLetters = false;
+    var k = 0;
+    var j = 0;
+    const inputElements = document.querySelectorAll("#inputs input[type=text]"); // creating an array with the inputs' value
+
+    for (var i = 0; i < 49; i++){
+      if (!((new RegExp("[Α-Ω]").test(inputElements[i].value)) || (inputElements[i].value === ""))) {   //checking for non greek characters
+        alert("Επιτρέπονται μόνο κεφαλαίοι ελληνικοί χαρακτηρες!");
+        nonGreekLetters = true;
+        break;     //breaks the loop
+      }
+    }
+
+    if (nonGreekLetters === false){
+      //creating an array with the user's inputs
+
+      //inputs horizontally
+      while(k <= 48){
+        for (i = k; i < k + 7; i++) {  
+          inputArray[j] = inputElements[i].value
+          if (inputArray[j] != correctAnswers[j]) {
+            inputElements[i].style.color = "red";
+      
+            hasMistakes = true;
+          }
+          j++
+        }
+        k += 14
+      }
+      k = 0;
+
+      //inputs vertically
+      while(k <= 6){
+        for (i = k; i < k + 43 ; i += 7) {  
+            inputArray[j] = inputElements[i].value
+            if (inputArray[j] != correctAnswers[j]) {
+              inputElements[i].style.color = "red";
+        
+              hasMistakes = true;
+            }
+            j++
+          }
+        k += 2
+      }
+      if (hasMistakes){
+        alert("Προσπάθησε ξανά");
+        }
+      }
+      else{
+        alert("Μου αρέσει πολύ η javascript")
+      }
+}
+
+document
+.getElementById("submitBtn")
+.addEventListener("click", function (event) {
+  event.preventDefault(); // do not reload page
+  resetColor();//reset color
+  onSubmit(); // call function
+});
+
+  function onReset() {
+    location.reload();
+  }
+
+  document
+    .getElementById("resetBtn")
+    .addEventListener("click", function (event) {
+      event.preventDefault(); // do not reload page
+      onReset(); // call function
+    });
+
+  function onSolve() {
+    const inputElements = document.querySelectorAll("#inputs input[type=text]"); // creating an array with the inputs' value
+    for (i = 0; i < 49; i++){
+      if (!(solvedInputs[i] === "")){
+        inputElements[i].value = solvedInputs[i];
+        inputElements[i].style.color = "black";
+      }
+    }
+  }
+
+  document
+    .getElementById("solveBtn")
+    .addEventListener("click", function (event) {
+      event.preventDefault(); // do not reload page
+      onSolve(); // call function
+    });
+</script>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8" />
+    <title>Δημιουργία φόρμας συλλογής στοιχείων</title>
+    <link rel="stylesheet" href="mystyle2.css" />
+  </head>
+  <body style="margin: 50px 400px 50px 400px; background-color: lightgreen">
+    <form>
+      <fieldset>
+        <legend>Μάσκα και IPv4</legend>
+        <ul>
+          <li id="ipv4">
+            <label for="Mask and IPv4">Διεύθυνση IP</label>
+            <input
+              type="text"
+              name="IPv4-1"
+              size="3"
+              maxlength="3"
+              required
+            />-<input
+              type="text"
+              name="IPv4-2"
+              size="3"
+              maxlength="3"
+              required
+            />-
+            <input
+              type="text"
+              name="IPv4-3"
+              size="3"
+              maxlength="3"
+              required
+            />-<input
+              type="text"
+              name="IPv4-4"
+              size="3"
+              maxlength="3"
+              required
+            /><br />
+          </li>
+          <br />
+          <li id="mask">
+            <label for="Μάσκα Δικτύου">Μάσκα Δικτύου</label>
+            <input
+              type="text"
+              name="Mask-1"
+              size="3"
+              maxlength="3"
+              required
+            />-<input
+              type="text"
+              name="Mask-2"
+              size="3"
+              maxlength="3"
+              required
+            />-
+            <input
+              type="text"
+              name="Mask-3"
+              size="3"
+              maxlength="3"
+              required
+            />-<input
+              type="text"
+              name="Mask-4"
+              size="3"
+              maxlength="3"
+              required
+            /><br />
+          </li>
+        </ul>
+        <p style="text-align: center">
+          <input id="submitBtn" type ="submit" value="Αποστολή" />
+          <input type="reset" value="Ακύρωση" />
+        </p>
+      </fieldset>
+    </form>
+    <!-- here we'll display the binary values -->
+    <div id="result"></div>
+  </body>
+  <script>
+    function checkNotEmpty() {
+      var hasEmptyValues = false;
+
+      // get input elements
+      const ipv4Inputs = document.querySelectorAll("#ipv4 input[type=text]");
+      const maskInputs = document.querySelectorAll("#mask input[type=text]");
+
+      // check for empty values
+      for (var i = 0; i < 4; i++) {
+        const ipv4Input = ipv4Inputs[i].value;
+        const maskInput = maskInputs[i].value;
+
+        if (ipv4Input.length === 0 || maskInput.length === 0) {
+          hasEmptyValues = true;
+          break;
+        }
+      }
+	  //if (hasEmptyValues) = true;
+      if (hasEmptyValues) {
+        alert("Πρέπει να συμπληρώσετε όλα τα κενά");
+        return false;
+      }
+
+      return true;
+    }
+
+    function checkValidValues() {
+      var hasInvalidValues = false;
+
+      // get input elements
+      const ipv4Inputs = document.querySelectorAll("#ipv4 input[type=text]");
+      const maskInputs = document.querySelectorAll("#mask input[type=text]");
+
+      // convert string to number
+      for (var i = 0; i < 4; i++) {
+        const ipv4Input = Number(ipv4Inputs[i].value);
+        const maskInput = Number(maskInputs[i].value);
+
+        if (ipv4Input > 255 || maskInput > 255) {
+          hasInvalidValues = true;
+          break;
+        }
+      }
+
+      if (hasInvalidValues) {
+        alert("Οι τιμές πρέπει να είναι από 0 έως 255");
+        return false;
+      }
+
+      return true;
+    }
+
+    function convertIntegerToBinary(number) {
+      var binary = "";
+      var temp = number;
+      while (temp > 0) {
+        if (temp % 2 == 0) {
+          binary = "0" + binary;
+        } else {
+          binary = "1" + binary;
+        }
+        temp = Math.floor(temp / 2);
+      }
+      return binary.padStart(8, "0"); // fill in missing zeros;
+    }
+
+    function drawBinaryValues() {
+      // get input elements
+      const ipv4Inputs = document.querySelectorAll("#ipv4 input[type=text]");
+      const maskInputs = document.querySelectorAll("#mask input[type=text]");
+
+      // convert ipv4 value to binary
+      const binaryIPV4 = Array.from(ipv4Inputs)
+        .map(function (ipv4Input) {
+          return convertIntegerToBinary(ipv4Input.value);
+        })
+        .join(".");
+
+      // convert mask value to binary
+      const binaryMask = Array.from(maskInputs)
+        .map(function (maskInput) {
+          return convertIntegerToBinary(maskInput.value);
+        })
+        .join(".");
+
+      const tableBorderStyle = 'style="border: 1px solid black"';
+      const tableRowBorderStyle = 'style="border-bottom: 1px solid black"';
+      const networkAddress = Number((ipv4Inputs && maskInputs).value);
+      // populate the result as HTML
+      const ipv4TableRow =
+        "<tr><td " +
+        tableRowBorderStyle +
+        ">" +
+        "IPV4: " +
+        binaryIPV4 +
+        "</td></tr>";
+      const maskTableRow =
+        "<tr><td " +
+        tableRowBorderStyle +
+        ">" +
+        "Mask: " +
+        binaryMask +
+        "</td></tr>";
+      const networkAddressTableRow = "<tr><td>" + "Address:" + networkAddress + "</td></tr>"; 
+
+      const table =
+        "<table " +
+        tableBorderStyle +
+        ">" +
+        ipv4TableRow +
+        maskTableRow +
+        networkAddressTableRow +
+        "</table>";
+
+      // display
+      document.getElementById("result").innerHTML = table;
+    }
+
+    function onSubmit() {
+      const isValidForm = checkNotEmpty() && checkValidValues();
+      if (!isValidForm) return;
+
+      drawBinaryValues(); // display the result as HTML
+    }
+
+    // attach onClick event listener on submit button
+    document
+      .getElementById("submitBtn")
+      .addEventListener("click", function (event) {
+        event.preventDefault(); // do not reload page
+        onSubmit(); // call function
+      });
+  </script>
+</html>
